@@ -60,28 +60,5 @@ class FifaSpider(scrapy.Spider):
         else:
             self.log('Wierd site %s',response.url)
 
-    # def parse(self, response):
-    #     page = response.url
-
-    #     if(page.split('/')[-2]!='player'):
-    #         page = response.url.split("?")[1]
-    #         page = page[5:]
-    #         fpath = 'data/List_pages/'
-    #         filename = 'Page_%s.html' % page
-    #         with open(fpath+filename, 'wb') as f:
-    #             f.write(response.body)
-    #         self.log('Saved file %s' % filename)
-    #         next_urls = response.css('div.player-filtering-body a::attr(href)').getall()
-    #         for url in next_urls:
-    #             if url is not None:
-    #                 next_page = response.urljoin(url)
-    #                 yield scrapy.Request(next_page, callback=self.parse)
-    #     else:
-    #         page = response.url.split("/")[-1]
-    #         fpath = 'data/Player_pages/'
-    #         filename = 'Player_%s.html' % page
-    #         with open(fpath+filename, 'wb') as f:
-    #             f.write(response.body)
-    #         self.log('Saved file %s' % filename)
         
     
