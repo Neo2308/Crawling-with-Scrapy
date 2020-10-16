@@ -19,7 +19,7 @@ class FbBDaySpider(scrapy.Spider):
     def parseBDayList(self,response):
         page = response.url
         if page.split('/')[-1] == 'Birthdays.html':
-            filename = 'Bdays.json'
+            filename = 'BDays.json'
             filepath = os.path.join('data',filename)
             data = {}
             boxes = response.css("li._55ws._5as-")
